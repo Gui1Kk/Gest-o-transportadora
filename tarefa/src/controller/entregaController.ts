@@ -14,13 +14,13 @@ export async function agendarEntrega(
     idUsuarioLogado: number
 ): Promise<void> {
     try {
-        console.log("⏳ Tentando agendar entrega...");
-        console.log(`📦 Quantidade de itens: ${itens.length}`);
+        console.log(" Tentando agendar entrega...");
+        console.log(` Quantidade de itens: ${itens.length}`);
 
         await entregaService.agendarEntrega(veiculo_id, motorista_id, data_prevista, endereco_destino, itens, idUsuarioLogado);
 
-        console.log("✅ Entrega agendada com sucesso! Log registrado.");
+        console.log(" Entrega agendada com sucesso! Log registrado.");
     } catch (erro: any) {
-        console.error("❌ Falha ao agendar entrega: " + erro.message);
+        console.error(" Falha ao agendar entrega: " + erro.message);
     }
 }
